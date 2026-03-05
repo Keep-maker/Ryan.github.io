@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人学术主页 | Academic Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 自定义平滑滚动偏移量，防止标题被固定导航栏遮挡 */
+        :target {
+            scroll-margin-top: 80px;
+        }
+        .active-nav {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-bottom: 2px solid white;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#165DFF] text-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <span class="font-bold text-xl tracking-tight">学术主页</span>
+                <div class="hidden md:flex space-x-1" id="nav-menu">
+                    <a href="#home" class="px-4 py-2 rounded transition-colors hover:bg-blue-600 nav-link active-nav">首页</a>
+                    <a href="#education" class="px-4 py-2 rounded transition-colors hover:bg-blue-600 nav-link">教育背景</a>
+                    <a href="#publications" class="px-4 py-2 rounded transition-colors hover:bg-blue-600 nav-link">学术论文</a>
+                    <a href="#projects" class="px-4 py-2 rounded transition-colors hover:bg-blue-600 nav-link">科研项目</a>
+                    <a href="#industry" class="px-4 py-2 rounded transition-colors hover:bg-blue-600 nav-link">产学研</a>
+                    <a href="#activities" class="px-4 py-2 rounded transition-colors hover:bg-blue-600 nav-link">学术交流</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="p-2">☰</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-4 pt-24 pb-12 space-y-16">
+
+        <section id="home" class="scroll-mt-24">
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 flex flex-col md:flex-row gap-8 items-center md:items-start">
+                <div class="w-40 h-40 bg-gray-200 rounded-lg overflow-hidden flex-shrink-0">
+                    <img src="https://via.placeholder.com/160" alt="Avatar" class="w-full h-full object-cover">
+                </div>
+                <div class="flex-grow space-y-4 text-center md:text-left">
+                    <div>
+                        <h1 class="text-3xl font-bold text-gray-900">张学术 教授</h1>
+                        <p class="text-blue-600 font-medium">某某大学 计算机科学与技术学院 · 博士生导师</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-gray-600">
+                        <p>📧 邮箱：zhang_scholar@university.edu.cn</p>
+                        <p>📍 地址：某某市科研大道 88 号实验楼 402</p>
+                        <p>🔍 研究方向：人工智能、计算机视觉、深度学习</p>
+                    </div>
+                    <div class="pt-4 flex flex-wrap justify-center md:justify-start gap-3">
+                        <button class="bg-[#165DFF] text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition shadow-md">
+                            导出个人 PDF CV
+                        </button>
+                        <a href="#" class="border border-gray-300 px-5 py-2 rounded-lg text-sm font-medium hover:bg-gray-50 transition">Google Scholar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="scroll-mt-24">
+            <h2 class="text-2xl font-bold mb-6 flex items-center">
+                <span class="w-1.5 h-8 bg-[#165DFF] mr-3 rounded-full"></span>教育背景
+            </h2>
+            <div class="space-y-4">
+                <div class="bg-white p-6 rounded-xl border-l-4 border-blue-500 shadow-sm">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-lg">清华大学 · 计算机科学与技术</h3>
+                            <p class="text-gray-600">博士学位 (Ph.D.)</p>
+                        </div>
+                        <span class="text-gray-400 font-mono">2015.09 - 2020.06</span>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl border-l-4 border-gray-300 shadow-sm">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-lg">浙江大学 · 软件工程</h3>
+                            <p class="text-gray-600">学士学位 (B.Eng.)</p>
+                        </div>
+                        <span class="text-gray-400 font-mono">2011.09 - 2015.06</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications" class="scroll-mt-24">
+            <h2 class="text-2xl font-bold mb-6 flex items-center">
+                <span class="w-1.5 h-8 bg-[#165DFF] mr-3 rounded-full"></span>代表性学术论文
+            </h2>
+            <div class="grid gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="px-2 py-1 bg-red-100 text-red-600 text-xs font-bold rounded">CVPR 2023</span>
+                        <span class="px-2 py-1 bg-blue-100 text-blue-600 text-xs font-bold rounded">CCF-A</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 hover:text-blue-600 cursor-pointer">Deep Vision Transformer for Scalable Object Detection</h3>
+                    <p class="text-gray-600 text-sm mb-4"><strong>Academic Zhang</strong>, John Doe, Jane Smith. *International Conference on Computer Vision and Pattern Recognition*.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-blue-600 text-sm font-medium hover:underline">[Abstract]</a>
+                        <a href="#" class="text-blue-600 text-sm font-medium hover:underline">[Paper]</a>
+                        <a href="#" class="text-blue-600 text-sm font-medium hover:underline">[Code]</a>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="px-2 py-1 bg-green-100 text-green-600 text-xs font-bold rounded">Nature MI</span>
+                        <span class="px-2 py-1 bg-blue-100 text-blue-600 text-xs font-bold rounded">Journal</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 hover:text-blue-600 cursor-pointer">Applications of AI in Sustainable Energy Management</h3>
+                    <p class="text-gray-600 text-sm mb-4">Jane Smith, <strong>Academic Zhang</strong>. *Nature Machine Intelligence*, 2022.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-blue-600 text-sm font-medium hover:underline">[DOI]</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="scroll-mt-24">
+            <h2 class="text-2xl font-bold mb-6 flex items-center">
+                <span class="w-1.5 h-8 bg-[#165DFF] mr-3 rounded-full"></span>核心科研项目
+            </h2>
+            <div class="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100">
+                <table class="w-full text-left border-collapse">
+                    <thead class="bg-gray-50 border-b">
+                        <tr>
+                            <th class="px-6 py-4 text-sm font-semibold text-gray-600 w-16">#</th>
+                            <th class="px-6 py-4 text-sm font-semibold text-gray-600">项目名称</th>
+                            <th class="px-6 py-4 text-sm font-semibold text-gray-600">时间</th>
+                            <th class="px-6 py-4 text-sm font-semibold text-gray-600">项目类别</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
+                        <tr>
+                            <td class="px-6 py-4 text-sm text-gray-500 italic">01</td>
+                            <td class="px-6 py-4">
+                                <p class="font-medium">基于深度学习的大规模跨模态检索研究</p>
+                                <p class="text-xs text-gray-400 mt-1">主持，针对多源异构数据的关联建模...</p>
+                            </td>
+                            <td class="px-6 py-4 text-sm text-gray-500">2021 - 2024</td>
+                            <td class="px-6 py-4 text-sm"><span class="px-2 py-1 bg-blue-50 text-blue-700 rounded">国家自然科学基金</span></td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 text-sm text-gray-500 italic">02</td>
+                            <td class="px-6 py-4">
+                                <p class="font-medium">省级智慧医疗影像分析平台开发</p>
+                                <p class="text-xs text-gray-400 mt-1">骨干，负责肺结节自动检测算法...</p>
+                            </td>
+                            <td class="px-6 py-4 text-sm text-gray-500">2022 - 2025</td>
+                            <td class="px-6 py-4 text-sm"><span class="px-2 py-1 bg-purple-50 text-purple-700 rounded">省重点研发计划</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="industry" class="scroll-mt-24">
+            <h2 class="text-2xl font-bold mb-6 flex items-center">
+                <span class="w-1.5 h-8 bg-[#165DFF] mr-3 rounded-full"></span>产学研应用示范
+            </h2>
+            <div class="bg-[#165DFF] text-white p-8 rounded-2xl shadow-xl relative overflow-hidden group">
+                <div class="relative z-10">
+                    <h3 class="text-2xl font-bold mb-4">智慧城市交通管控系统 2.0</h3>
+                    <p class="opacity-90 mb-6 max-w-2xl text-lg">
+                        该成果已成功应用于某一线城市交通管理中心，显著提升了高峰期通行效率 15%，覆盖全市 3000+ 个交叉路口，实现了显著的社会经济效益。
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <span class="px-3 py-1 bg-white/20 rounded-full text-xs">行业领先</span>
+                        <span class="px-3 py-1 bg-white/20 rounded-full text-xs">落地应用</span>
+                    </div>
+                </div>
+                <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-white/10 rounded-full group-hover:scale-110 transition duration-500"></div>
+            </div>
+        </section>
+
+        <section id="activities" class="scroll-mt-24">
+            <h2 class="text-2xl font-bold mb-6 flex items-center">
+                <span class="w-1.5 h-8 bg-[#165DFF] mr-3 rounded-full"></span>学术交流与会议
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="text-blue-600 font-mono text-sm mb-2">2023.10 · 广州</div>
+                    <h4 class="font-bold mb-2">中国计算机大会 (CNCC)</h4>
+                    <p class="text-sm text-gray-500 mb-4">担任“人工智能分论坛”特邀演讲嘉宾</p>
+                    <span class="text-xs bg-gray-100 px-2 py-1 rounded">Invited Speaker</span>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="text-blue-600 font-mono text-sm mb-2">2023.06 · 温哥华</div>
+                    <h4 class="font-bold mb-2">CVPR 2023</h4>
+                    <p class="text-sm text-gray-500 mb-4">分会场主席 (Session Chair)</p>
+                    <span class="text-xs bg-gray-100 px-2 py-1 rounded">Session Chair</span>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="text-blue-600 font-mono text-sm mb-2">2022.12 · 上海</div>
+                    <h4 class="font-bold mb-2">智能影像技术研讨会</h4>
+                    <p class="text-sm text-gray-500 mb-4">大会组委会主席</p>
+                    <span class="text-xs bg-gray-100 px-2 py-1 rounded">Organizer</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-12 text-center text-sm">
+        <p>© 2026 张学术. All Rights Reserved.</p>
+        <p class="mt-2">Built with HTML5 & Tailwind CSS</p>
+    </footer>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            // 1. 滚动检测：确定当前视口所在的 section
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                // 当滚动超过 section 顶部 150px 时切换（考虑导航栏高度）
+                if (pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            // 2. 更新导航栏样式
+            navLinks.forEach(link => {
+                link.classList.remove('active-nav');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active-nav');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
